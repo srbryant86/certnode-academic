@@ -1,11 +1,17 @@
-# Core
+# FastAPI Interface
 fastapi==0.110.0
 uvicorn==0.29.0
+
+# Flask Legacy Support
+flask==2.3.3
+flask-cors==4.0.0
+
+# Logic Processing & Schema
 jsonschema==4.22.0
 
 # Testing
 pytest==7.4.2
-httpx==0.27.0  # For FastAPI test client
+httpx==0.27.0
 
-# Optional (if needed)
+# Optional
 pydantic==2.6.4
