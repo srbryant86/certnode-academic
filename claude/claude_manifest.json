@@ -1,0 +1,9 @@
+{
+  "runtime": "certnode_t17",
+  "entrypoints": {
+    "validate": "/certnode_api/validate",
+    "submit_batch": "/certnode_api/batch"
+  },
+  "capsule_schema": "schemas/cert_output_manifest.json",
+  "subagents": ["audit_agent", "logic_agent", "batch_certifier"]
+}
