@@ -10,99 +10,127 @@ It is designed as an **infrastructure-level tool** to support research, media in
 
 ---
 
-## Overview
+# CertNode
 
-CertNode analyzes text in three stages:
+**CertNode** is an infrastructure-grade framework for **logic, structure, and epistemic certification** of human- and AI-authored content.
+It provides a **neutral, reproducible, and academically credible** method to analyze nonfiction text for:
 
-1. **Logical Structure Mapping**  
-   Identifies claims, evidence, and the relationships between them.
+* Logical structure and coherence
+* Rhetorical manipulation or bias detection
+* Argument convergence and epistemic integrity
 
-2. **Fallacy and Rhetorical Pattern Detection**  
-   Highlights reasoning errors or persuasive techniques that may influence interpretation.
-
-3. **Verifiable Certification**  
-   Generates a cryptographically signed evaluation record for transparency and auditability.
-
-The system is intended to be **neutral, reproducible, and research-oriented**, serving academic, journalistic, and enterprise applications.
+CertNode is designed to serve as a **standard for trust and certification** in research, publishing, and enterprise AI output validation.
 
 ---
 
-## Key Features
+## 🎯 Project Goals
 
-- **Logic and Rhetorical Analysis**  
-  Evaluates argument clarity, structure, and the presence of manipulative framing.
+1. **Academic Credibility**
 
-- **Certified Outputs**  
-  Produces JSON-based evaluation reports with cryptographic hash sealing for verifiable records.
+   * Structured, reproducible analysis
+   * Whitepaper-aligned methodology
+   * Peer-review friendly outputs
 
-- **API and CLI**  
-  Supports both programmatic and command-line access for batch or on-demand analysis.
+2. **Enterprise Readiness**
 
-- **Integration-Ready**  
-  Compatible with CI/CD pipelines, containerized deployment, and agent-based systems.
+   * JSON certification reports with structural metrics
+   * API-first architecture for SaaS or on-prem deployment
+   * Support for batch processing and auditing at scale
+
+3. **Human + AI Certification Standard**
+
+   * Analyze human and AI-authored texts with the same methodology
+   * Output **logic and structural scores**, not opinions
+   * Optional cryptographic signing of certifications
 
 ---
 
-## Example Certified Output
+## 🧩 Core Features
 
-```json
-{
-  "capsule_hash": "SHA256...",
-  "logic_structure_score": 0.82,
-  "fallacy_flags": ["ad_hominem"],
-  "rhetorical_intensity": "moderate",
-  "timestamp": "2025-07-31T13:00:00Z",
-  "validation_passed": true
-}
+* **Logic & Structural Integrity Analysis**
+
+  * Detects argument flow, paragraph cohesion, and slope convergence
+* **Rhetorical & Manipulation Detection**
+
+  * Highlights bias, persuasive imbalance, or rhetorical loading
+* **Certification Output**
+
+  * Exports JSON with structural metrics and certification hash
+* **Extensible Architecture**
+
+  * Modular processors (CDP, FRAME) and pluggable post-processors
+
+---
+
+## 📦 Deployment
+
+CertNode supports **local CLI, containerized, and cloud-hosted** deployment.
+
+### Local CLI (Academic Use)
+
+```bash
+python certnode_api.py --input document.txt --output report.json
 ```
 
-This output can be independently verified to ensure that evaluations have not been altered post-generation.
+### Docker Deployment (Production)
+
+```bash
+docker build -t certnode .
+docker run -p 8000:8000 certnode
+```
+
+### CI/CD Auto Deployment
+
+* **Frontend:** Vercel (Next.js, React)
+* **Backend:** Render (FastAPI/Flask)
+* **Docs:** GitHub Pages (MkDocs or Sphinx)
 
 ---
 
-## Installation
+## 📜 Documentation
 
-1. Clone the repository:
-   ```bash
-   git clone <repository_url>
-   cd certnode
-   ```
-
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Run tests (optional, recommended):
-   ```bash
-   pytest --maxfail=1 --disable-warnings -q
-   ```
+* [Whitepaper](docs/CERTNODE_WHITEPAPER.md)
+* [API Reference](docs/api.md)
+* [Architecture Overview](docs/architecture.md)
 
 ---
 
-## Deployment
+## 💼 Monetization & Enterprise Adoption
 
-CertNode supports:
+**CertNode** is offered under a **dual license**:
 
-- **Dockerized Deployment** with `Dockerfile` and `docker-compose.yml`  
-- **FastAPI Runtime** for web service integration  
-- **CLI Tooling** for batch and offline processing
+* **Academic & Research Use:** Free
+* **Enterprise / Commercial Use:** Paid licensing with support
 
----
+### Example Enterprise Features:
 
-## Applications
+* API batch certification & audit logs
+* CertVault™ storage for long-term verification
+* SLA-backed deployments with SSO/OAuth integration
 
-- **Academic and Scholarly Research**: Pre‑screening manuscripts for structural clarity.  
-- **Journalism and Media**: Independent verification of editorial logic.  
-- **Enterprise Communication**: Internal report auditing for consistency and reasoning quality.  
-- **Public Engagement**: Enhancing reasoning literacy through transparent evaluation.
+> For enterprise inquiries, contact: [**research@certnode.org**](mailto:research@certnode.org)
 
 ---
 
-## License
+## 🧪 Testing
 
-This project is released under the MIT License. See `LICENSE` for details.
+Run the included `pytest` suite:
+
+```bash
+pytest -v
+```
+
+CI/CD will auto-validate on each push to `main`.
 
 ---
 
-*CertNode prioritizes neutrality, reproducibility, and auditability for the study and certification of logical structure in digital communication.*
+## ⚖️ License
+
+* **Academic Use:** Free for research and publication
+* **Enterprise / Commercial:** Requires license agreement
+
+---
+
+## 📌 Project Status
+
+CertNode is in **active development** with the goal of becoming a **peer-reviewed standard** for logic and epistemic certification in both **human and AI outputs**.
